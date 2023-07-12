@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <title>Ramenautos</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-light" data-bs-theme="light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Ramenautos</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03"
+                aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarColor03">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#seccion-cotizacion">Cotizar
+                            <span class="visually-hidden">(current)</span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                    <a class="nav-link" href="#">Ingresar</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <body>
+        <div id="carouselExample" class="carousel slide">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="imagenes/portada1.jpg" class="d-block w-100" alt="bolt-masthead-home-xs">
+                </div>
+                <div class="carousel-item">
+                    <img src="imagenes/portada2.jpg" class="d-block w-100" alt="chevrolet-ecuador-joy-sedan">
+                </div>
+                <div class="carousel-item">
+                    <img src="imagenes/portada3.jpg" class="d-block w-100" alt="chevrolet-ecuador-montana-xs">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </body>
+
+    <hr>
+
+    <section class="cotizacion" id="seccion-cotizacion">
+        <div class="formulario-registro">
+            <form>
+                <div class="mb-3">
+                    <label for="ci_cliente">CI/RUC</label>
+                    <input type="text" class="form-control" id="ci_cliente" aria-describedby="emailHelp" />
+                </div>
+                <div class="mb-3">
+                    <label for="nombres_cliente">Nombres</label>
+                    <input type="text" class="form-control" id="nombres_cliente" />
+                </div>
+                <div class="mb-3">
+                    <label for="apellidos_cliente">Apellidos</label>
+                    <input type="text" class="form-control" id="apellidos_cliente" />
+                </div>
+                <div class="mb-3">
+                    <label for="direccion_cliente">Dirección</label>
+                    <input type="text" class="form-control" id="direccion_cliente" />
+                </div>
+                <div class="mb-3">
+                    <label for="eleccion">Elige tu vehículo</label>
+                    <select class="form-select" aria-label="Default select example" id="eleccion">
+                        <option selected>Seleccione</option>
+                        <option value="Ford Fiesta">Ford Fiesta</option>
+                        <option value="Ford Focus">Ford Focus</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="price">Ingrese el valor del vehículo: </label>
+                    <input type="number" name="precio-vehiculo" id="price" min="20000" max="45000" step="5000">
+                </div>
+                <button type="submit" class="btn btn-primary" onclick="captura()">Registrar</button>
+            </form>
+        </div>
+        <div class="cotizacion-factura">
+            <h2>Cotización</h2> <br>
+            <p id="imprimir-nombre-empleado"></p>
+            <p id="imprimir-cargo-empleado"></p>
+            <p id="imprimir-apellido"></p>
+            <p id="imprimir-direccion"></p>
+            <p id="imprimir-vehiculo"></p>
+            <p id="imprimir-valor-final"></p>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

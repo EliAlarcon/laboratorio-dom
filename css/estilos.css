@@ -1,0 +1,10 @@
+.cotizacion{
+    display: grid;
+    grid-template-columns: 5fr 2fr 5fr;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.cotizacion-factura{
+    grid-column: 3/4;
+}
